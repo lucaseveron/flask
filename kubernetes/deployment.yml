@@ -16,8 +16,20 @@ spec:
     spec:
       containers:
       - name: flask
-        image: mongo:windowsservercore-ltsc2022
+        image: lucaseveron/flask:1.0
         ports:
         - containerPort: 80
 
-
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: appjava-service
+spec:
+  selector:
+    app: appjava
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+  type: NodePort
