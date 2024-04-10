@@ -2,16 +2,16 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: my-app-deployment
-  namespace: Flask
+  namespace: flask
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: Flask-app
+      app: flask-app
   template:
     metadata:
       labels:
-        app: Flask-app
+        app: flask-app
     spec:
       containers:
         - name: my-app-container
