@@ -4,7 +4,7 @@ metadata:
   name: my-service
 spec:
   selector:
-    app: app.py
+    app: app
   ports:
     - protocol: TCP
       port: 6969
