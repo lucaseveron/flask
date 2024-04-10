@@ -1,7 +1,9 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: my-app-deployment
+  name: flask-deployment
+  labels:
+    app: flask
 spec:
   replicas: 3
   selector:
@@ -13,9 +15,9 @@ spec:
         app: flask
     spec:
       containers:
-        - name: my-app-container
-          image: tu-repositorio/tu-aplicacion:tag
-          ports:
-            - containerPort: 80
+      - name: flask
+        image: lucaseveron/flask:1.0
+        ports:
+        - containerPort: 80
 
 
