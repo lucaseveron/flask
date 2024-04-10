@@ -21,11 +21,11 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: my-app-service
+  name: mi-servicio
 spec:
   selector:
-    app: Flask-app
+    app.kubernetes.io/name: Flask-app
   ports:
-    - port: 80
-      targetPort: 80
-  type: NodePort
+    - protocol: TCP
+      port: 80
+      targetPort: 9376
