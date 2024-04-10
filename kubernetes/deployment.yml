@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: flask
-        image: lucaseveron/flask:tagname
+        image: mongo:windowsservercore-ltsc2022
         ports:
         - containerPort: 80
 
