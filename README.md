@@ -5,21 +5,19 @@ Pasos:
 2. Automatización de la construcción y despliegue de la aplicación en el repositorio de imágenes Docker Hub, utilizando la herramienta GitHub Actions.
 
 3. Exposición y construcción de la aplicación a través de Docker Compose para el entorno local:
-
-Copy code
+   
 docker-compose up -d
+
 4. Exposición y orquestación de la aplicación mediante Kubernetes. Se utiliza un manifiesto de deployment, service y namespace:
 
-
-Copy code
 kubectl apply -f deployment.yml
 kubectl get pods
 kubectl get service
-Requisitos previos: herramientas a instalar
 
-En Windows: Docker Desktop y un editor de código, como Visual Studio Code o Sublime.
-En Ubuntu: Docker, un cluster de Kubernetes (Minikube o Microk8s).
-Podman (opcional): Utilizado para verificar la conexión de la API.
+Herramientas a instalar:
+Windows: Docker Desktop y un editor de código, como Visual Studio Code o Sublime.
+Ubuntu: Docker, un cluster de Kubernetes (Minikube o Microk8s).
+Podman (opcional): Utilizado para verificar la conexión con la API.
 
 [![Issues](https://img.shields.io/github/issues/jainamoswal/Flask-Example?style=for-the-badge&color=green)](https://github.com/jainamoswal/Flask-Example/issues)
 [![Forks](https://img.shields.io/github/forks/jainamoswal/Flask-Example?style=for-the-badge&color=green)](https://github.com/jainamoswal/Flask-Example/fork)
